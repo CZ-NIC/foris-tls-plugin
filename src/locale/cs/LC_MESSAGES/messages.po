@@ -1,0 +1,140 @@
+# Foris - web administration interface for OpenWrt based on NETCONF
+# Copyright (C) 2013 CZ.NIC, z.s.p.o. <http://www.nic.cz>
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+# Jan Cermak <jan.cermak@nic.cz>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Foris TLS plugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-12-04 13:50+0100\n"
+"PO-Revision-Date: 2014-02-05 13:55+0100\n"
+"Last-Translator: Jan Cermak <jan.cermak@nic.cz>\n"
+"Language-Team: Czech <>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+msgid "active"
+msgstr "aktivní"
+
+msgid "revoked"
+msgstr "revokovaný"
+
+msgid "expired"
+msgstr "expirovaný"
+
+msgid ""
+"This page serves for management of remote access to the router's "
+"configuration backend using TLS API. You can use generated client tokens for "
+"authentication in third-party applications that implement this API."
+msgstr ""
+"Na této stránce je možné spravovat vzdálený přístup ke konfiguračnímu "
+"rozhraní pomocí TLS API. Vygenerované klientské tokeny lze použít k "
+"autentizaci v aplikacích třetích stran, které toto API implementují."
+
+msgid ""
+"Please be aware that these tokens allow access to the whole configuration of "
+"the router, which may be exploited by a malicious user who has access to "
+"them."
+msgstr ""
+"Berte prosím na vědomí, že tyto tokeny umožňují přístup ke kompletní "
+"konfiguraci routeru, což může vést ke kompromitaci routeru, pokud k "
+"nim získá přístup neoprávněná osoba."
+
+msgid ""
+"New certification authority is being generated. Please try coming back later."
+msgstr ""
+"Probíhá vytváření nové certifikační autority. Zkuste prosím přijít později."
+
+msgid "List of clients"
+msgstr "Seznam klientů"
+
+msgid "Client"
+msgstr "Klient"
+
+msgid "Status"
+msgstr "Stav"
+
+msgid "Get token"
+msgstr "Stáhnout token"
+
+msgid "New client"
+msgstr "Nový klient"
+
+msgid "Create"
+msgstr "Vytvořit"
+
+msgid "Revoke access"
+msgstr "Zrušení přístupu"
+
+msgid ""
+"It is not possible to revoke access to individual clients, but you can reset "
+"the whole certification authority (CA) and disable access for all the "
+"clients. Creating a new authority takes some time. This action is "
+"irreversible."
+msgstr ""
+"V současnosti není možné rušit přístup jednotlivým klientům, ale je možné "
+"odstranit celou certifikační autoritu (CA) a zrušit tak přístup všem "
+"klientům. Vytvoření nové autority bude chvíli trvat. Tato akce je nevratná."
+
+msgid "Reset CA"
+msgstr "Resetovat CA"
+
+msgid ""
+"Do you really want to reset CA and revoke access for all the clients? This "
+"can not be undone!"
+msgstr ""
+"Opravdu chcete opětovně vytvořit celou CA a zrušit přístup všem klientům? "
+"Tato akce je nevratná!"
+
+msgid "TLS API"
+msgstr "TLS API"
+
+msgid "Client name"
+msgstr "Jméno klienta"
+
+msgid ""
+"Display name for the client. It must be shorter than 64 characters and must "
+"contain only alphanumeric characters, dots, dashes and underscores."
+msgstr ""
+"Zobrazované jméno klienta. Musí být kratší než 64 znaků a může obsahovat "
+"pouze alfanumerické znaky, tečky, pomlčky a podtržítka."
+
+msgid "Client name is invalid."
+msgstr "Jméno klienta je neplatné."
+
+#, python-format
+msgid ""
+"Request for creating a new client \"%s\" was succesfully submitted. Client "
+"token should be available for download in a minute."
+msgstr ""
+
+#, python-format
+msgid "Error occurred when creating client \"'%s\"."
+msgstr "Při vytváření klienta \"%s\" došlo k chybě."
+
+#, python-format
+msgid "Unable to get token for user \"%s\"."
+msgstr "Nepodařilo se stáhnout token pro klienta \"%s\"."
+
+msgid "Reset of certification authority was successfully submitted."
+msgstr "Požadavek na reset certifikační autority byl úspěšně odeslán."
+
+msgid "Error occurred when trying to reset CA."
+msgstr "Při pokusu o resetování CA \"%s\" došlo k chybě."

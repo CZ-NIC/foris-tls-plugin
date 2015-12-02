@@ -1,0 +1,4 @@
+*.py[co]
+*.s[ac]ssc
+*.mo
+src/static/css
