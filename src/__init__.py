@@ -100,7 +100,7 @@ class TLSConfigPage(ConfigPageMixin, TLSConfigHandler):
     def render(self, **kwargs):
         kwargs['ca'] = get_ca()
         kwargs['PLUGIN_NAME'] = TLSPlugin.PLUGIN_NAME
-        kwargs['PLUGIN_STATICS'] = TLSPlugin.PLUGIN_STATICS
+        kwargs['PLUGIN_STYLES'] = TLSPlugin.PLUGIN_STYLES
         return super(TLSConfigPage, self).render(**kwargs)
 
     def save(self, *args, **kwargs):
@@ -111,7 +111,7 @@ class TLSConfigPage(ConfigPageMixin, TLSConfigHandler):
 class TLSPlugin(ForisPlugin):
     PLUGIN_NAME = "tls"
     DIRNAME = os.path.dirname(os.path.abspath(__file__))
-    PLUGIN_STATICS = [
+    PLUGIN_STYLES = [
         "css/screen.css",
     ]
 
