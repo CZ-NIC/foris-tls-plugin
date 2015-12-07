@@ -124,6 +124,8 @@ msgid ""
 "Request for creating a new client \"%s\" was succesfully submitted. Client "
 "token should be available for download in a minute."
 msgstr ""
+"Probíhá generování nového klienta \"%s\". Přibližně během minuty by měl být"
+"token dostupný ke stažení."
 
 #, python-format
 msgid "Error occurred when creating client \"'%s\"."
