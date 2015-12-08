@@ -21,6 +21,14 @@ logger = logging.getLogger(__name__)
 ca_filter = ET.Element(tls.NuciTLS.qual_tag("ca"))
 
 
+def _extract_token_from_xml(xml_string):
+    xml = ET.fromstring(xml_string)
+    element = xml.find(tls.NuciTLS.qual_tag("token"))
+    if element is None:
+        return None
+    return element.text
+
+
 def get_ca():
     data = netconf.get(
         filter=("subtree", ca_filter)
@@ -36,7 +44,7 @@ def get_ca():
 def get_token(name):
     try:
         data = dispatch(tls.NuciTLS.rpc_get_token(name))
-        return data.xml
+        return _extract_token_from_xml(data.xml)
     except (RPCError, TimeoutExpiredError):
         logger.exception("Error when getting TLS token.")
         return None
