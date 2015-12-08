@@ -23,7 +23,7 @@ from .nuci.tls_module import client_name_regexp
 
 
 class TLSConfigHandler(BaseConfigHandler):
-    userfriendly_title = gettext("TLS API")  # TODO: something less stupid
+    userfriendly_title = gettext("Access tokens")
 
     def get_form(self):
         tls_form = ForisForm("tls", self.data, filter=ca_filter)
@@ -48,7 +48,7 @@ class TLSConfigHandler(BaseConfigHandler):
                       "Client token should be available for download in a minute.") % client_name
                 )
             else:
-                messages.error(_("Error occurred when creating client \"'%s\".") % client_name)
+                messages.error(_("Error occurred when creating client \"%s\".") % client_name)
             return "none", None
 
         tls_form.add_callback(maintenance_form_cb)
