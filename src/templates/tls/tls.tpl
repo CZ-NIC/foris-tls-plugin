@@ -73,7 +73,7 @@
 
   <script>
     $(document).on("click", "#reset-ca-submit", function () {
-      return confirm("{{ trans("Do you really want to reset CA and revoke access for all the clients? This can not be undone!") }}");
+      return confirm("{{ trans("Do you really want to reset the CA and revoke access for all the clients? This can not be undone!") }}");
     });
   </script>
 </div>

@@ -32,7 +32,7 @@ class TLSConfigHandler(BaseConfigHandler):
         )
         maintenance_main.add_field(
             Textbox, name="client_name", label=_("Client name"), required=True,
-            hint=_("Display name for the client. It must be shorter than 64 characters "
+            hint=_("The display name for the client. It must be shorter than 64 characters "
                    "and must contain only alphanumeric characters, dots, dashes and "
                    "underscores."),
             validators=[RegExp(_("Client name is invalid."),
@@ -48,7 +48,7 @@ class TLSConfigHandler(BaseConfigHandler):
                       "Client token should be available for download in a minute.") % client_name
                 )
             else:
-                messages.error(_("Error occurred when creating client \"%s\".") % client_name)
+                messages.error(_("An error occurred when creating client \"%s\".") % client_name)
             return "none", None
 
         tls_form.add_callback(maintenance_form_cb)
@@ -80,9 +80,9 @@ class TLSConfigPage(ConfigPageMixin, TLSConfigHandler):
         :return: redirect to plugin's main page
         """
         if reset_ca():
-            messages.success(_("Reset of certification authority was successfully submitted."))
+            messages.success(_("Reset of the certification authority was successfully submitted."))
         else:
-            messages.error(_("Error occurred when trying to reset CA."))
+            messages.error(_("An error occurred when trying to reset the CA."))
 
         bottle.redirect(reverse("config_page", page_name="tls"))
 
