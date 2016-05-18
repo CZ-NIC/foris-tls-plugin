@@ -31,50 +31,61 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "active"
-msgstr ""
+msgstr "aktiv"
 
 msgid "revoked"
-msgstr ""
+msgstr "gesperrt"
 
 msgid "expired"
-msgstr ""
+msgstr "abgelaufen"
 
 msgid ""
 "This page serves for management of remote access to the router's "
 "configuration backend using TLS API. You can use generated client tokens for "
 "authentication in third-party applications that implement this API."
 msgstr ""
+"Diese Webseite dient zur Verwaltung des Fernzugriffs zu der "
+"Konfigurationsschnittstelle des Routers. Für den Fernzugriff wird eine "
+"TLS-Schnittstelle verwendet. Ihr könnt die erzeugten kryptographischen "
+"Client-Tokens zur Authentifizierung in Drittanbieteranwendungen, welche "
+"diese Schnittstelle implementieren, verwenden."
 
 msgid ""
 "Please be aware that these tokens allow access to the whole configuration of "
 "the router, which may be exploited by a malicious user who has access to "
 "them."
 msgstr ""
+"Beachten Sie bitte, dass diese Tokens den Zugriff zu der gesamten "
+"Konfiguration des Routers ermöglichen. Es kann zu einer Kompromittierung des "
+"Gerätes führen, falls das Token in den Besitz eines unbefugten (oder "
+"böswilligen) Benutzers kommt."
 
 msgid ""
 "New certification authority is being generated. Please try coming back later."
 msgstr ""
+"Es wird eine neue Zertifizierungsautorität generiert. Kehren Sie bitte zu "
+"einem späteren Zeitpunkt zurück."
 
 msgid "List of clients"
-msgstr ""
+msgstr "Liste der Klienten"
 
 msgid "Client"
-msgstr ""
+msgstr "Klient"
 
 msgid "Status"
-msgstr ""
+msgstr "Status"
 
 msgid "Get token"
-msgstr ""
+msgstr "Token herunterladen"
 
 msgid "New client"
-msgstr ""
+msgstr "Neuer Klient"
 
 msgid "Create"
-msgstr ""
+msgstr "Erstellen"
 
 msgid "Revoke access"
-msgstr ""
+msgstr "Zugangsberechtigung widerrufen"
 
 msgid ""
 "It is not possible to revoke access to individual clients, but you can reset "
@@ -82,45 +93,61 @@ msgid ""
 "clients. Creating a new authority takes some time. This action is "
 "irreversible."
 msgstr ""
+"Zurzeit ist es nicht möglich den Zugang für einzelne Klienten zu sperren. "
+"Sie können aber die ganze Zertifizierungsautorität (CA) zurücksetzen und "
+"damit den Zugang für alle Klienten verbieten. Die Erstellung einer neuen "
+"Autorität wird eine Weile dauern. Diese Aktion kann nicht rückgängig gemacht "
+"werden."
 
 msgid "Reset CA"
-msgstr ""
+msgstr "CA zurücksetzen"
 
 msgid ""
 "Do you really want to reset the CA and revoke access for all the clients? "
 "This can not be undone!"
 msgstr ""
+"Wollen sie wirklich die CA zurücksetzen und Zugriffsberechtigungen aller "
+"Klienten widerrufen?"
 
 msgid "Access tokens"
-msgstr ""
+msgstr "Zugangsberechtigungen (Tokens)"
 
 msgid "Client name"
-msgstr ""
+msgstr "Client-Name"
 
 msgid ""
 "The display name for the client. It must be shorter than 64 characters and "
 "must contain only alphanumeric characters, dots, dashes and underscores."
 msgstr ""
+"Der Name des Klienten, welcher dann angezeigt wird. Der Name muss kürzer als "
+"64 Zeichen sein un soll nur aus alphanumerischen Zeichen, Punkten, "
+"Trennstrichen und Unterstrichen bestehen."
 
 msgid "Client name is invalid."
-msgstr ""
+msgstr "Der Client-Name ist ungültig."
 
 #, python-format
 msgid ""
 "Request for creating a new client \"%s\" was succesfully submitted. Client "
 "token should be available for download in a minute."
 msgstr ""
+"Ein neues Client-Token \"%s\" wird generiert. In ungefähr einer Minute "
+"sollte das Token zum Herunterladen verfügbar sein."
 
 #, python-format
 msgid "An error occurred when creating client \"%s\"."
 msgstr ""
+"Ein Fehler ist während der Generierung des Client-Tokens \"%s\" aufgetreten."
 
 #, python-format
 msgid "Unable to get token for user \"%s\"."
-msgstr ""
+msgstr "Das Token \"%s\" konnte nicht heruntergeladen werden."
 
 msgid "Reset of the certification authority was successfully submitted."
 msgstr ""
+"Die Anforderung für das Zurücksetzen der Zertifizierungsautorität wurde "
+"erfolgreich abgeschickt."
 
 msgid "An error occurred when trying to reset the CA."
 msgstr ""
+"Ein Fehler ist während des Versuches, die CA zurückzusetzen, aufgetreten."
