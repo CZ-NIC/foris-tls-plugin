@@ -110,7 +110,7 @@ msgstr ""
 "Klienten widerrufen?"
 
 msgid "Access tokens"
-msgstr "Zugangsberechtigungen (Tokens)"
+msgstr "Zugangsverwaltung"
 
 msgid "Client name"
 msgstr "Client-Name"
