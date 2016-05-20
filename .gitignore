@@ -1,4 +1,5 @@
 *.py[co]
 *.s[ac]ssc
 *.mo
+messages.po
 src/static/css
