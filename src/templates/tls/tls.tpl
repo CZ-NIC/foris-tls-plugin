@@ -33,7 +33,7 @@
             <tr>
               <th>{{ trans("Client") }}</th>
               <th>{{ trans("Status") }}</th>
-              <th>{{ trans("Get token") }}</th>
+              <th>{{ trans("Access token") }}</th>
             </tr>
           </thead>
           <tbody>

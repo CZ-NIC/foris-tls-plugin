@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Foris TLS plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-09 13:37+0100\n"
+"POT-Creation-Date: 2016-12-14 13:48+0100\n"
 "PO-Revision-Date: 2014-02-05 13:55+0100\n"
 "Last-Translator: Jan Cermak <jan.cermak@nic.cz>\n"
 "Language-Team: Czech <>\n"
@@ -71,8 +71,14 @@ msgstr "Klient"
 msgid "Status"
 msgstr "Stav"
 
-msgid "Get token"
+msgid "Access token"
+msgstr "Přístupový token"
+
+msgid "Download token"
 msgstr "Stáhnout token"
+
+msgid "Get QR code"
+msgstr "Zobrazit QR kód"
 
 msgid "New client"
 msgstr "Nový klient"
@@ -102,6 +108,13 @@ msgid ""
 msgstr ""
 "Opravdu chcete opětovně vytvořit celou CA a zrušit přístup všem klientům? "
 "Tato akce je nevratná!"
+
+msgid "Access token for client"
+msgstr "Přístupový token pro klienta"
+
+msgid "Unable to get token. Please try refreshing the page and try again."
+msgstr ""
+"Nepodařilo se vygenerovat token. Obnovte stránku a zkuste to prosím znovu."
 
 msgid "Access tokens"
 msgstr "Přístupové tokeny"
