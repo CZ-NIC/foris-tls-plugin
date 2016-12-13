@@ -8,7 +8,8 @@
 import logging
 from xml.etree import cElementTree as ET
 
-from foris.nuci.client import netconf, dispatch
+from foris.nuci import filters
+from foris.nuci.client import get, netconf, dispatch
 from ncclient.operations import TimeoutExpiredError
 from ncclient.operations import RPCError
 
@@ -27,6 +28,13 @@ def _extract_token_from_xml(xml_string):
     if element is None:
         return None
     return element.text
+
+
+def get_stats_dict():
+    try:
+        return get(filter=filters.stats).find_child("stats").data
+    except (RPCError, TimeoutExpiredError):
+        return {}
 
 
 def get_ca():

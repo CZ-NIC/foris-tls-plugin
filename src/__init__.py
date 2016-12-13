@@ -6,6 +6,7 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 import os
+import time
 
 import bottle
 
@@ -18,7 +19,7 @@ from foris.config_handlers import BaseConfigHandler
 from foris.utils import messages, reverse
 from foris.validators import RegExp, LenRange
 
-from .nuci import get_ca, get_token, ca_filter, new_client, reset_ca
+from .nuci import get_ca, get_stats_dict, get_token, ca_filter, new_client, reset_ca
 from .nuci.tls_module import client_name_regexp
 
 
@@ -57,13 +58,13 @@ class TLSConfigHandler(BaseConfigHandler):
 
 class TLSConfigPage(ConfigPageMixin, TLSConfigHandler):
     template = "tls/tls.tpl"
+    TOKEN_URL_PREFIX = "/get-token/"
 
-    def _action_get_token(self):
-        """Handle POST requesting download of nuci-tls token
+    # One-time token URLs presented in the QR code
+    token_codes = {}
 
-        :return: response with token with appropriate HTTP headers
-        """
-        client_name = bottle.request.POST.get("name")
+    @staticmethod
+    def make_token_response(client_name):
         token = get_token(client_name)
         if not token:
             messages.error(_("Unable to get token for user \"%s\".") % client_name)
@@ -73,6 +74,46 @@ class TLSConfigPage(ConfigPageMixin, TLSConfigHandler):
         bottle.response.set_header("Content-Disposition", 'attachment; filename="%s.pem' % client_name)
         bottle.response.set_header("Content-Length", len(token))
         return token
+
+    @classmethod
+    def _action_generate_token_qrcode_data(cls):
+        client_name = bottle.request.POST.get("qrcode")
+        token_code = os.urandom(20).encode("hex")
+        expire_time = int(time.time()) + 30  # TODO: 30 seconds for debugging purposes - probably increase
+        # Add token to the dict of tokens
+        cls.token_codes[token_code] = {
+            'expires_at': expire_time,
+            'client_name': client_name,
+        }
+        stats = get_stats_dict()
+        # Return info about token as JSON
+        request_urlparts = bottle.request.urlparts
+        return {
+            'expires_at': expire_time,
+            'host': request_urlparts.netloc,
+            'scheme': request_urlparts.scheme,
+            'path': reverse("get-token", token_code=token_code),
+            'board_name': stats['board-name'].lower(),
+            'hostname': stats['hostname'],
+        }
+
+    @classmethod
+    def get_token(cls, token_code):
+        # pop the token info from dict - it must be invalidated
+        token = cls.token_codes.pop(token_code, None)
+        if not token:
+            raise bottle.HTTPError(404, "Invalid token code.")
+        if time.time() > token['expires_at']:
+            raise bottle.HTTPError(410, "The token code has expired.")
+        return TLSConfigPage.make_token_response(token['client_name'])
+
+    def _action_get_token(self):
+        """Handle POST requesting download of nuci-tls token
+
+        :return: response with token with appropriate HTTP headers
+        """
+        client_name = bottle.request.POST.get("name")
+        return self.make_token_response(client_name)
 
     def _action_reset_ca(self):
         """Call RPC for resetting the CA and redirect back.
@@ -92,6 +133,9 @@ class TLSConfigPage(ConfigPageMixin, TLSConfigHandler):
             messages.error("Wrong HTTP method.")
             bottle.redirect(reverse("config_page", page_name="tls"))
         if action == "get-token":
+            if bottle.request.POST.get("qrcode"):
+                # Button for QR token generation has been clicked
+                return self._action_generate_token_qrcode_data()
             return self._action_get_token()
         elif action == "reset-ca":
             return self._action_reset_ca()
@@ -118,3 +162,5 @@ class TLSPlugin(ForisPlugin):
     def __init__(self, app):
         super(TLSPlugin, self).__init__(app)
         add_config_page("tls", TLSConfigPage, top_level=True)
+        app.route(TLSConfigPage.TOKEN_URL_PREFIX + "<token_code:re:[0-9a-f]+>", method="GET",
+                  callback=TLSConfigPage.get_token, name="get-token")

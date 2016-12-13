@@ -41,7 +41,10 @@
             <tr>
               <td>{{ client['name'] }}</td>
               <td>{{ trans(client['status']) }}</td>
-              <td><button name="name" value="{{ client['name'] }}" type="submit">{{ trans("Get token") }}</button></td>
+              <td>
+                <button name="name" value="{{ client['name'] }}" type="submit">{{ trans("Download token") }}</button>
+                <button class="get-qr" name="qrcode" value="{{ client['name'] }}" type="submit">{{ trans("Get QR code") }}</button>
+              </td>
             </tr>
           %end
           </tbody>
@@ -71,9 +74,79 @@
     </form>
   %end
 
+  %# jquery.qrcode is part of the JS libraries included in Foris itself
+  <script src="{{ static("js/contrib/jquery.qrcode-0.7.0.min.js") }}"></script>
   <script>
     $(document).on("click", "#reset-ca-submit", function () {
       return confirm("{{ trans("Do you really want to reset the CA and revoke access for all the clients? This can not be undone!") }}");
+    });
+
+    $(document).on('click', '.get-qr', function(e) {
+      e.preventDefault();
+      var $this = $(this),
+          $form = $this.parents('form:first'),
+          formData = $form.serializeArray(),
+          clientName = $this.attr('value');
+
+      $this.attr('disabled', 'disabled');
+      formData.push({name: $this.attr('name'), value: clientName});
+
+      $.post($form.attr('action'), formData)
+          .done(function (qrData) {
+            $("#page-plugin-tls")
+                .append('<div class="token-modal"><div class="token-modal-content">' +
+                    '<span class="close">&times;</span>' +
+                    '<div id="token-qrcode" />' +
+                    '<p>' + '{{ trans("Access token for client") }} ' +
+                    '<strong>' + clientName + '</strong>.<br>' +
+                    '{{ trans ("Token will be automatically invalidated in") }} ' +
+                    '<span id="token-timeout">?</span> s.' +
+                    '</p></div></div>');
+
+            var $tokenTimeoutValue = $('#token-timeout');
+
+            function updateTokenTimeout() {
+              var remainingTime = qrData.expires_at - (Date.now() / 1000);
+              $tokenTimeoutValue.text(Math.floor(remainingTime));
+            }
+
+            updateTokenTimeout();
+
+            function removeModal() {
+              $('.token-modal').remove();
+            }
+
+            $(window).on('click', function (e) {
+              if(e.target.className == 'token-modal' || e.target.className == 'close') {
+                removeModal();
+              }
+            });
+
+            var removeModalInterval = window.setInterval(function () {
+              if ((Date.now() / 1000) > qrData.expires_at) {
+                removeModal();
+                window.clearTimeout(removeModalInterval);
+              } else {
+                updateTokenTimeout();
+              }
+            }, 1000);
+
+            var turrisURI = "turris://" + qrData.host + qrData.path + '?scheme=' + qrData.scheme
+                + '&hostname=' + qrData.hostname + '&board_name=' + qrData.board_name;
+
+
+            $("#token-qrcode").qrcode({
+              size: 200,
+              text: turrisURI
+            });
+
+          })
+          .fail(function () {
+            window.alert('{{ trans("Unable to get token. Please try refreshing the page and try again.") }}')
+          })
+          .always(function () {
+            $this.removeAttr('disabled');
+          });
     });
   </script>
 </div>

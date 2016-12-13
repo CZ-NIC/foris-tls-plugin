@@ -5,3 +5,34 @@
 
   th, td
     padding: 0.2em 0.5em
+
+$qrcode-vertical-padding: 50px
+$qrcode-horizontal-padding: 80px
+$qrcode-size: 200px // must be consistent with JS qrcode size
+
+.token-modal
+  position: fixed
+  z-index: 6666
+  left: 0
+  top: 0
+  overflow: auto
+  width: 100%
+  height: 100%
+  background-color: rgba(0, 0, 0, 0.5)
+
+  .token-modal-content
+    z-index: 6667
+    background-color: #fff
+    width: 2 * $qrcode-horizontal-padding + $qrcode-size
+    margin: 10% auto
+    text-align: center
+
+  #token-qrcode
+    padding: ($qrcode-vertical-padding + 10px) $qrcode-horizontal-padding $qrcode-vertical-padding
+
+  .close
+    float: right
+    font-size: 36px
+    font-weight: bold
+    margin-right: 12px
+    cursor: pointer
