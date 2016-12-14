@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Foris TLS plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-14 13:48+0100\n"
+"POT-Creation-Date: 2016-12-14 14:37+0100\n"
 "PO-Revision-Date: 2014-02-05 13:55+0100\n"
 "Last-Translator: Jan Cermak <jan.cermak@nic.cz>\n"
 "Language-Team: Czech <>\n"
@@ -111,6 +111,9 @@ msgstr ""
 
 msgid "Access token for client"
 msgstr "Přístupový token pro klienta"
+
+msgid "Token will be automatically invalidated in"
+msgstr "Token bude automaticky zneplatněn za"
 
 msgid "Unable to get token. Please try refreshing the page and try again."
 msgstr ""

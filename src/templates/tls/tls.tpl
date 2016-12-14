@@ -99,7 +99,7 @@
                     '<div id="token-qrcode" />' +
                     '<p>' + '{{ trans("Access token for client") }} ' +
                     '<strong>' + clientName + '</strong>.<br>' +
-                    '{{ trans ("Token will be automatically invalidated in") }} ' +
+                    '{{ trans("Token will be automatically invalidated in") }} ' +
                     '<span id="token-timeout">?</span> s.' +
                     '</p></div></div>');
 
