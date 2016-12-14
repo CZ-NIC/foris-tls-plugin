@@ -104,13 +104,13 @@
                     '</p></div></div>');
 
             var $tokenTimeoutValue = $('#token-timeout');
+            var remainingTime = qrData.expiration_time;
 
-            function updateTokenTimeout() {
-              var remainingTime = qrData.expires_at - (Date.now() / 1000);
+            function updateTokenTimeoutDisplay() {
               $tokenTimeoutValue.text(Math.floor(remainingTime));
             }
 
-            updateTokenTimeout();
+            updateTokenTimeoutDisplay();
 
             function removeModal() {
               $('.token-modal').remove();
@@ -123,11 +123,12 @@
             });
 
             var removeModalInterval = window.setInterval(function () {
-              if ((Date.now() / 1000) > qrData.expires_at) {
+              if (remainingTime <= 0) {
                 removeModal();
                 window.clearTimeout(removeModalInterval);
               } else {
-                updateTokenTimeout();
+                remainingTime--;
+                updateTokenTimeoutDisplay();
               }
             }, 1000);
 

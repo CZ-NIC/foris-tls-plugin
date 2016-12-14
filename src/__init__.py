@@ -6,7 +6,6 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 import os
-import time
 
 import bottle
 
@@ -21,6 +20,7 @@ from foris.validators import RegExp, LenRange
 
 from .nuci import get_ca, get_stats_dict, get_token, ca_filter, new_client, reset_ca
 from .nuci.tls_module import client_name_regexp
+from .utils import get_system_uptime
 
 
 class TLSConfigHandler(BaseConfigHandler):
@@ -59,6 +59,7 @@ class TLSConfigHandler(BaseConfigHandler):
 class TLSConfigPage(ConfigPageMixin, TLSConfigHandler):
     template = "tls/tls.tpl"
     TOKEN_URL_PREFIX = "/get-token/"
+    TOKEN_EXPIRATION_TIME = 30
 
     # One-time token URLs presented in the QR code
     token_codes = {}
@@ -79,7 +80,8 @@ class TLSConfigPage(ConfigPageMixin, TLSConfigHandler):
     def _action_generate_token_qrcode_data(cls):
         client_name = bottle.request.POST.get("qrcode")
         token_code = os.urandom(20).encode("hex")
-        expire_time = int(time.time()) + 30  # TODO: 30 seconds for debugging purposes - probably increase
+        # Expiration time - use uptime as reference, as it's harder to tamper with
+        expire_time = int(get_system_uptime()) + TLSConfigPage.TOKEN_EXPIRATION_TIME
         # Add token to the dict of tokens
         cls.token_codes[token_code] = {
             'expires_at': expire_time,
@@ -89,7 +91,7 @@ class TLSConfigPage(ConfigPageMixin, TLSConfigHandler):
         # Return info about token as JSON
         request_urlparts = bottle.request.urlparts
         return {
-            'expires_at': expire_time,
+            'expiration_time': TLSConfigPage.TOKEN_EXPIRATION_TIME,
             'host': request_urlparts.netloc,
             'scheme': request_urlparts.scheme,
             'path': reverse("get-token", token_code=token_code),
@@ -103,7 +105,7 @@ class TLSConfigPage(ConfigPageMixin, TLSConfigHandler):
         token = cls.token_codes.pop(token_code, None)
         if not token:
             raise bottle.HTTPError(404, "Invalid token code.")
-        if time.time() > token['expires_at']:
+        if get_system_uptime() > token['expires_at']:
             raise bottle.HTTPError(410, "The token code has expired.")
         return TLSConfigPage.make_token_response(token['client_name'])
 
