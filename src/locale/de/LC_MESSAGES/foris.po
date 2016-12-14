@@ -75,15 +75,14 @@ msgstr "Klient"
 msgid "Status"
 msgstr "Status"
 
-#, fuzzy
 msgid "Access token"
-msgstr "Zugangsverwaltung"
+msgstr "Zugangsberechtigung"
 
 msgid "Download token"
-msgstr ""
+msgstr "Token herunterladen"
 
 msgid "Get QR code"
-msgstr ""
+msgstr "QR-Code anzeigen"
 
 msgid "New client"
 msgstr "Neuer Klient"
@@ -117,10 +116,12 @@ msgstr ""
 "Klienten widerrufen?"
 
 msgid "Access token for client"
-msgstr ""
+msgstr "Zugangsberechtigung des Klienten"
 
 msgid "Unable to get token. Please try refreshing the page and try again."
 msgstr ""
+"Die Erzeugung des Tokens ist fehlgeschlagen. Laden Sie die Seite neu und "
+"versuchen Sie es noch einmal."
 
 msgid "Access tokens"
 msgstr "Zugangsverwaltung"
