@@ -57,6 +57,7 @@ class TLSConfigHandler(BaseConfigHandler):
 
 
 class TLSConfigPage(ConfigPageMixin, TLSConfigHandler):
+    menu_order = 61
     template = "tls/tls.tpl"
     TOKEN_URL_PREFIX = "/get-token/"
     TOKEN_EXPIRATION_TIME = 30
