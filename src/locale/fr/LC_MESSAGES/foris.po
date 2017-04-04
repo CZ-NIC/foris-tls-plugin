@@ -8,16 +8,19 @@ msgstr ""
 "Project-Id-Version: Foris TLS plugin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-03-02 13:25+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2017-04-04 16:20+0000\n"
+"Last-Translator: anonymous <>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/turris/foris-tls-"
+"plugin/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 2.13-dev\n"
 
 msgid "Access tokens"
-msgstr ""
+msgstr "Jetons d'accès"
 
 msgid "Client name"
 msgstr ""
@@ -28,7 +31,7 @@ msgid ""
 msgstr ""
 
 msgid "Client name is invalid."
-msgstr ""
+msgstr "Le nom du client est invalide."
 
 #, python-format
 msgid ""
@@ -38,7 +41,7 @@ msgstr ""
 
 #, python-format
 msgid "An error occurred when creating client \"%s\"."
-msgstr ""
+msgstr "Une erreur est survenue pendant la création du client \"%s\"."
 
 #, python-format
 msgid "Unable to get token for user \"%s\"."
@@ -70,13 +73,13 @@ msgid "List of clients"
 msgstr ""
 
 msgid "Client"
-msgstr ""
+msgstr "Client"
 
 msgid "Status"
 msgstr ""
 
 msgid "Access token"
-msgstr ""
+msgstr "Jeton d'accès"
 
 msgid "Download token"
 msgstr ""
@@ -85,10 +88,10 @@ msgid "Get QR code"
 msgstr ""
 
 msgid "New client"
-msgstr ""
+msgstr "Nouveau client"
 
 msgid "Create"
-msgstr ""
+msgstr "Créer"
 
 msgid "Revoke access"
 msgstr ""
@@ -112,7 +115,7 @@ msgid "Access token for client"
 msgstr ""
 
 msgid "Token will be automatically invalidated in"
-msgstr ""
+msgstr "Le jeton sera automatiquement invalidé dans"
 
 msgid "Unable to get token. Please try refreshing the page and try again."
 msgstr ""
