@@ -1,0 +1,149 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Foris TLS plugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-02 13:25+0100\n"
+"PO-Revision-Date: 2017-04-03 09:53+0000\n"
+"Last-Translator: Krzysztof Kulesza <github@cmza.pl>\n"
+"Language-Team: Polish <https://hosted.weblate.org/projects/turris/foris-tls-"
+"plugin/pl/>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 2.13-dev\n"
+
+msgid "Access tokens"
+msgstr "Tokeny dostępu"
+
+msgid "Client name"
+msgstr "Nazwa klienta"
+
+msgid ""
+"The display name for the client. It must be shorter than 64 characters and "
+"must contain only alphanumeric characters, dots, dashes and underscores."
+msgstr ""
+"Nazwa wyświetlana dla klienta. Musi być krótsza niż 64 znaki i musi zawierać "
+"tylko znaki alfanumeryczne, kropki, myślniki i podkreślenia."
+
+msgid "Client name is invalid."
+msgstr "Nazwa klienta jest nieprawidłowa."
+
+#, python-format
+msgid ""
+"Request for creating a new client \"%s\" was succesfully submitted. Client "
+"token should be available for download in a minute."
+msgstr ""
+"Zażądano utworzenie nowego klienta \"%s\". Token klienta powinien być "
+"dostępny do pobrania w ciągu kilku minut."
+
+#, python-format
+msgid "An error occurred when creating client \"%s\"."
+msgstr "Podczas tworzenia klienta \"%s\" wystąpił błąd."
+
+#, python-format
+msgid "Unable to get token for user \"%s\"."
+msgstr "Nie można pobrać tokenu dla użytkownika \"%s\"."
+
+msgid "Reset of the certification authority was successfully submitted."
+msgstr "Zresetowano urząd certyfikacji (CA)."
+
+msgid "An error occurred when trying to reset the CA."
+msgstr "Podczas próby zresetowania urzędu certyfikacji (CA) wystąpił błąd."
+
+msgid ""
+"This page serves for management of remote access to the router's "
+"configuration backend using TLS API. You can use generated client tokens for "
+"authentication in third-party applications that implement this API."
+msgstr ""
+"Ta strona służy do zarządzania zdalnym dostępem do zaplecza konfiguracyjnego "
+"routera przy użyciu interfejsu TLS API. Można użyć wygenerowanych tokenów "
+"klienta do uwierzytelniania w aplikacjach innych firm, które implementują to "
+"API."
+
+msgid ""
+"Please be aware that these tokens allow access to the whole configuration of "
+"the router, which may be exploited by a malicious user who has access to "
+"them."
+msgstr ""
+"Pamiętaj, że tokeny umożliwiają dostęp do całej konfiguracji routera, który "
+"może zostać wykorzystany przez złośliwego użytkownika, który ma do niego "
+"dostęp."
+
+msgid ""
+"New certification authority is being generated. Please try coming back later."
+msgstr "Tworzę nowy urząd certyfikacji (CA). Proszę spróbować wrócić później."
+
+msgid "List of clients"
+msgstr "Lista klientów"
+
+msgid "Client"
+msgstr "Klient"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Access token"
+msgstr "Token dostępu"
+
+msgid "Download token"
+msgstr "Pobierz token"
+
+msgid "Get QR code"
+msgstr "Pobierz kod QR"
+
+msgid "New client"
+msgstr "Nowy klient"
+
+msgid "Create"
+msgstr "Utwórz"
+
+msgid "Revoke access"
+msgstr "Cofnij dostęp"
+
+msgid ""
+"It is not possible to revoke access to individual clients, but you can reset "
+"the whole certification authority (CA) and disable access for all the "
+"clients. Creating a new authority takes some time. This action is "
+"irreversible."
+msgstr ""
+"Nie można cofnąć dostępu do poszczególnych klientów, ale można zresetować "
+"cały urząd certyfikacji (CA) i wyłączyć dostęp dla wszystkich klientów. "
+"Utworzenie nowego urzędu certyfikacji trwa trochę czasu. Jest to działanie "
+"nieodwracalne."
+
+msgid "Reset CA"
+msgstr "Resetuj CA"
+
+msgid ""
+"Do you really want to reset the CA and revoke access for all the clients? "
+"This can not be undone!"
+msgstr ""
+"Czy na pewno chcesz zresetować urząd certyfikacji (CA) i cofnąć dostęp do "
+"wszystkich klientów? Tej operacji nie da się cofnąć!"
+
+msgid "Access token for client"
+msgstr "Token dostępu dla klienta"
+
+msgid "Token will be automatically invalidated in"
+msgstr "Token zostanie automatycznie unieważniony za"
+
+msgid "Unable to get token. Please try refreshing the page and try again."
+msgstr ""
+"Nie można uzyskać tokena. Spróbuj odświeżyć stronę i spróbować ponownie."
+
+msgid "active"
+msgstr "aktywny"
+
+msgid "revoked"
+msgstr "unieważniony"
+
+msgid "expired"
+msgstr "przedawniony"
