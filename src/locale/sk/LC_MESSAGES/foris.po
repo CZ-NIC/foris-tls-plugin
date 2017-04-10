@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Foris TLS plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-09 13:37+0100\n"
+"POT-Creation-Date: 2017-04-10 14:45+0200\n"
 "PO-Revision-Date: 2017-03-05 10:50+0100\n"
 "Last-Translator: Vladimír Záhradník <vladimir.zahradnik@gmail.com>\n"
 "Language-Team: Slovak\n"
@@ -29,81 +29,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-
-msgid "active"
-msgstr "aktívny"
-
-msgid "revoked"
-msgstr "revokovaný"
-
-msgid "expired"
-msgstr "exspirovaný"
-
-msgid ""
-"This page serves for management of remote access to the router's "
-"configuration backend using TLS API. You can use generated client tokens for "
-"authentication in third-party applications that implement this API."
-msgstr ""
-"Na tejto stránke je možné spravovať vzdialený prístup ku konfiguračnému "
-"rozhraniu pomocou TLS API. Vygenerované klientské tokeny je možné použiť na "
-"autentifikáciu v aplikáciách tretích strán, ktoré toto API implementujú."
-
-msgid ""
-"Please be aware that these tokens allow access to the whole configuration of "
-"the router, which may be exploited by a malicious user who has access to "
-"them."
-msgstr ""
-"Berte, prosím, na vedomie, že tieto tokeny umožňujú prístup ku kompletnej "
-"konfigurácii routera, čo môže viesť ku kompromitácii routera, pokiaľ k nim "
-"získa prístup neoprávnená osoba."
-
-msgid ""
-"New certification authority is being generated. Please try coming back later."
-msgstr ""
-"Prebieha vytváranie novej certifikačnej autority. Skúste, prosím, prísť "
-"neskôr."
-
-msgid "List of clients"
-msgstr "Zoznam klientov"
-
-msgid "Client"
-msgstr "Klient"
-
-msgid "Status"
-msgstr "Stav"
-
-msgid "Get token"
-msgstr "Prevziať token"
-
-msgid "New client"
-msgstr "Nový klient"
-
-msgid "Create"
-msgstr "Vytvoriť"
-
-msgid "Revoke access"
-msgstr "Zrušenie prístupu"
-
-msgid ""
-"It is not possible to revoke access to individual clients, but you can reset "
-"the whole certification authority (CA) and disable access for all the "
-"clients. Creating a new authority takes some time. This action is "
-"irreversible."
-msgstr ""
-"V súčasnosti nie je možné rušiť prístup jednotlivým klientom, ale je možné "
-"odstrániť celú certifikačnú autoritu (CA) a zrušiť tak prístup všetkým "
-"klientom. Vytvorenie novej autority bude chvíľu trvať. Túto akciu nie je "
-"možné vrátiť späť."
-
-msgid "Reset CA"
-msgstr "Resetovať CA"
-
-msgid ""
-"Do you really want to reset the CA and revoke access for all the clients? "
-"This can not be undone!"
-msgstr ""
-"Skutočne chcete opätovne vytvoriť celú CA a zrušiť prístup všetkým klientom? "
-"Táto akciu nie je možné vrátiť späť!"
 
 msgid "Access tokens"
 msgstr "Prístupové tokeny"
@@ -143,3 +68,96 @@ msgstr ""
 
 msgid "An error occurred when trying to reset the CA."
 msgstr "Pri pokuse o resetovanie CA došlo k chybe."
+
+msgid ""
+"This page serves for management of remote access to the router's "
+"configuration backend using TLS API. You can use generated client tokens for "
+"authentication in third-party applications that implement this API."
+msgstr ""
+"Na tejto stránke je možné spravovať vzdialený prístup ku konfiguračnému "
+"rozhraniu pomocou TLS API. Vygenerované klientské tokeny je možné použiť na "
+"autentifikáciu v aplikáciách tretích strán, ktoré toto API implementujú."
+
+msgid ""
+"Please be aware that these tokens allow access to the whole configuration of "
+"the router, which may be exploited by a malicious user who has access to "
+"them."
+msgstr ""
+"Berte, prosím, na vedomie, že tieto tokeny umožňujú prístup ku kompletnej "
+"konfigurácii routera, čo môže viesť ku kompromitácii routera, pokiaľ k nim "
+"získa prístup neoprávnená osoba."
+
+msgid ""
+"New certification authority is being generated. Please try coming back later."
+msgstr ""
+"Prebieha vytváranie novej certifikačnej autority. Skúste, prosím, prísť "
+"neskôr."
+
+msgid "List of clients"
+msgstr "Zoznam klientov"
+
+msgid "Client"
+msgstr "Klient"
+
+msgid "Status"
+msgstr "Stav"
+
+#, fuzzy
+msgid "Access token"
+msgstr "Prístupové tokeny"
+
+msgid "Download token"
+msgstr ""
+
+#, fuzzy
+msgid "Get QR code"
+msgstr "Prevziať token"
+
+msgid "New client"
+msgstr "Nový klient"
+
+msgid "Create"
+msgstr "Vytvoriť"
+
+msgid "Revoke access"
+msgstr "Zrušenie prístupu"
+
+msgid ""
+"It is not possible to revoke access to individual clients, but you can reset "
+"the whole certification authority (CA) and disable access for all the "
+"clients. Creating a new authority takes some time. This action is "
+"irreversible."
+msgstr ""
+"V súčasnosti nie je možné rušiť prístup jednotlivým klientom, ale je možné "
+"odstrániť celú certifikačnú autoritu (CA) a zrušiť tak prístup všetkým "
+"klientom. Vytvorenie novej autority bude chvíľu trvať. Túto akciu nie je "
+"možné vrátiť späť."
+
+msgid "Reset CA"
+msgstr "Resetovať CA"
+
+msgid ""
+"Do you really want to reset the CA and revoke access for all the clients? "
+"This can not be undone!"
+msgstr ""
+"Skutočne chcete opätovne vytvoriť celú CA a zrušiť prístup všetkým klientom? "
+"Táto akciu nie je možné vrátiť späť!"
+
+#, fuzzy
+msgid "Access token for client"
+msgstr "Prístupové tokeny"
+
+msgid "Token will be automatically invalidated in"
+msgstr ""
+
+msgid "Unable to get token. Please try refreshing the page and try again."
+msgstr ""
+
+msgid "active"
+msgstr "aktívny"
+
+msgid "revoked"
+msgstr "revokovaný"
+
+msgid "expired"
+msgstr "exspirovaný"

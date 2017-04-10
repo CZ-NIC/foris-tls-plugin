@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Foris TLS plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-18 10:09+0200\n"
+"POT-Creation-Date: 2017-04-10 14:45+0200\n"
 "PO-Revision-Date: 2017-04-01 21:31+0000\n"
 "Last-Translator: Peter Hendrickx <fuel@mailbox.org>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/turris/foris-tls-"
@@ -35,8 +35,8 @@ msgstr ""
 msgid "Access tokens"
 msgstr "Zugangsverwaltung"
 
-msgid "revoked"
-msgstr "widerrufen"
+msgid "Client name"
+msgstr "Clientname"
 
 msgid ""
 "The display name for the client. It must be shorter than 64 characters and "
@@ -45,6 +45,9 @@ msgstr ""
 "Der Anzeigename für den Client. Es darf nicht länger als 64 Zeichen sein und "
 "darf nur alphanumerische Zeichen, Punkte, Bindestriche und Unterstriche "
 "enthalten."
+
+msgid "Client name is invalid."
+msgstr "Der Clientname ist ungültig."
 
 #, python-format
 msgid ""
@@ -154,19 +157,16 @@ msgstr "Zugangsberechtigung des Klienten"
 msgid "Token will be automatically invalidated in"
 msgstr "Die Zugangsberechtigung erlischt automatisch nach"
 
-msgid "Client name"
-msgstr "Clientname"
-
 msgid "Unable to get token. Please try refreshing the page and try again."
 msgstr ""
 "Die Erzeugung des Tokens ist fehlgeschlagen. Laden Sie die Seite neu und "
 "versuchen Sie es noch einmal."
 
-msgid "Client name is invalid."
-msgstr "Der Clientname ist ungültig."
-
 msgid "active"
 msgstr "aktiv"
+
+msgid "revoked"
+msgstr "widerrufen"
 
 msgid "expired"
 msgstr "abgelaufen"

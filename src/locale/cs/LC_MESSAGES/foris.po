@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Foris TLS plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-09 13:37+0100\n"
+"POT-Creation-Date: 2017-04-10 14:45+0200\n"
 "PO-Revision-Date: 2017-03-01 14:00+0000\n"
 "Last-Translator: Stepan Henek <stepan+github@henek.name>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/turris/foris-tls-"
@@ -69,12 +69,6 @@ msgstr "Požadavek na reset certifikační autority byl úspěšně odeslán."
 
 msgid "An error occurred when trying to reset the CA."
 msgstr "Při pokusu o resetování CA došlo k chybě."
-
-msgid "revoked"
-msgstr "zneplatněný"
-
-msgid "expired"
-msgstr "prošlý"
 
 msgid ""
 "This page serves for management of remote access to the router's "
@@ -158,3 +152,9 @@ msgstr ""
 
 msgid "active"
 msgstr "aktivní"
+
+msgid "revoked"
+msgstr "zneplatněný"
+
+msgid "expired"
+msgstr "prošlý"
