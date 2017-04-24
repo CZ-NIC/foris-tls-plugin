@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: Foris TLS plugin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-03-02 13:25+0100\n"
-"PO-Revision-Date: 2017-04-24 09:50+0000\n"
-"Last-Translator: anonymous <>\n"
+"PO-Revision-Date: 2017-04-24 09:51+0000\n"
+"Last-Translator: Easylarveur <easylarveur@hotmail.fr>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/turris/foris-tls-"
 "plugin/fr/>\n"
 "Language: fr\n"
@@ -145,14 +145,11 @@ msgstr ""
 "Impossible d'obtenir le jeton. Veuillez rafraîchir la page et essayer à "
 "nouveau."
 
-#, fuzzy
 msgid "active"
 msgstr "actif"
 
-#, fuzzy
 msgid "revoked"
 msgstr "révoqué"
 
-#, fuzzy
 msgid "expired"
 msgstr "expiré"
