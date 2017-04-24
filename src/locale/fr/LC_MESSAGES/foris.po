@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: Foris TLS plugin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-03-02 13:25+0100\n"
-"PO-Revision-Date: 2017-04-24 08:50+0000\n"
-"Last-Translator: Easylarveur <easylarveur@hotmail.fr>\n"
+"PO-Revision-Date: 2017-04-24 09:31+0000\n"
+"Last-Translator: anonymous <>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/turris/foris-tls-"
 "plugin/fr/>\n"
 "Language: fr\n"
@@ -41,6 +41,8 @@ msgid ""
 "Request for creating a new client \"%s\" was succesfully submitted. Client "
 "token should be available for download in a minute."
 msgstr ""
+"La requête pour créer un nouveau client \"%s\" a été soumise avec succès. Le "
+"jeton du client devrait être disponible au téléchargement dans une minute."
 
 #, python-format
 msgid "An error occurred when creating client \"%s\"."
@@ -48,10 +50,11 @@ msgstr "Une erreur est survenue pendant la création du client \"%s\"."
 
 #, python-format
 msgid "Unable to get token for user \"%s\"."
-msgstr ""
+msgstr "Impossible d'obtenir un jeton pour l'utilisateur \"%s\"."
 
 msgid "Reset of the certification authority was successfully submitted."
 msgstr ""
+"La réinitialisation de l’autorité de certification a été soumise avec succès."
 
 msgid "An error occurred when trying to reset the CA."
 msgstr ""
