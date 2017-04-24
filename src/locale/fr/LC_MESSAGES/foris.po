@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Foris TLS plugin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-03-02 13:25+0100\n"
-"PO-Revision-Date: 2017-04-19 07:55+0000\n"
+"PO-Revision-Date: 2017-04-24 08:50+0000\n"
 "Last-Translator: Easylarveur <easylarveur@hotmail.fr>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/turris/foris-tls-"
 "plugin/fr/>\n"
@@ -123,11 +123,14 @@ msgstr "Le jeton sera automatiquement invalidé dans"
 msgid "Unable to get token. Please try refreshing the page and try again."
 msgstr ""
 
+#, fuzzy
 msgid "active"
-msgstr ""
+msgstr "actif"
 
+#, fuzzy
 msgid "revoked"
-msgstr ""
+msgstr "révoqué"
 
+#, fuzzy
 msgid "expired"
-msgstr ""
+msgstr "expiré"
