@@ -21,14 +21,16 @@ msgstr ""
 "Project-Id-Version: Foris TLS plugin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-10 14:45+0200\n"
-"PO-Revision-Date: 2017-03-05 10:50+0100\n"
+"PO-Revision-Date: 2017-04-29 08:17+0000\n"
 "Last-Translator: Vladimír Záhradník <vladimir.zahradnik@gmail.com>\n"
-"Language-Team: Slovak\n"
+"Language-Team: Slovak <https://hosted.weblate.org/projects/turris/foris-tls-"
+"plugin/sk/>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 2.14-dev\n"
 
 msgid "Access tokens"
 msgstr "Prístupové tokeny"
@@ -102,16 +104,14 @@ msgstr "Klient"
 msgid "Status"
 msgstr "Stav"
 
-#, fuzzy
 msgid "Access token"
-msgstr "Prístupové tokeny"
+msgstr "Prístupový token"
 
 msgid "Download token"
-msgstr ""
-
-#, fuzzy
-msgid "Get QR code"
 msgstr "Prevziať token"
+
+msgid "Get QR code"
+msgstr "Zobraziť QR kód"
 
 msgid "New client"
 msgstr "Nový klient"
@@ -143,21 +143,22 @@ msgstr ""
 "Skutočne chcete opätovne vytvoriť celú CA a zrušiť prístup všetkým klientom? "
 "Táto akciu nie je možné vrátiť späť!"
 
-#, fuzzy
 msgid "Access token for client"
-msgstr "Prístupové tokeny"
+msgstr "Prístupový token pre klienta"
 
 msgid "Token will be automatically invalidated in"
-msgstr ""
+msgstr "Token bude automaticky zneplatnený za"
 
 msgid "Unable to get token. Please try refreshing the page and try again."
 msgstr ""
+"Nepodarilo sa vygenerovať token. Obnovte stránku a vyskúšajte to, prosím, "
+"opäť."
 
 msgid "active"
 msgstr "aktívny"
 
 msgid "revoked"
-msgstr "revokovaný"
+msgstr "zneplatnený"
 
 msgid "expired"
 msgstr "exspirovaný"
