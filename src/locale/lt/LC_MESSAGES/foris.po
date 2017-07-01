@@ -8,90 +8,107 @@ msgstr ""
 "Project-Id-Version: Foris TLS plugin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-10 14:46+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2017-07-01 09:06+0000\n"
+"Last-Translator: Fln <weblate.org@fln.lt>\n"
+"Language-Team: Lithuanian <https://hosted.weblate.org/projects/turris/foris-"
+"tls-plugin/lt/>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 0 : n%10>=2 && (n%100<10 || "
+"n%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3;\n"
+"X-Generator: Weblate 2.16-dev\n"
 
 msgid "Access tokens"
-msgstr ""
+msgstr "Prieigos tokenai"
 
 msgid "Client name"
-msgstr ""
+msgstr "Kliento vardas"
 
 msgid ""
 "The display name for the client. It must be shorter than 64 characters and "
 "must contain only alphanumeric characters, dots, dashes and underscores."
 msgstr ""
+"Kliento vardas naudojamas atvaizdavimui. Turi būti trumpesnis nei 64 "
+"simboliai, varde gali būti naudojamos raidės, skaičiai, taškas, brūkšnys ir "
+"pabraukimas."
 
 msgid "Client name is invalid."
-msgstr ""
+msgstr "Netinkamas kliento vardas."
 
 #, python-format
 msgid ""
 "Request for creating a new client \"%s\" was succesfully submitted. Client "
 "token should be available for download in a minute."
 msgstr ""
+"Prašymas sukurti naują klientą \"%s\" sėkmingai nusiųstas. Kliento tokeną "
+"bus galima netrukus atsisiųsti."
 
 #, python-format
 msgid "An error occurred when creating client \"%s\"."
-msgstr ""
+msgstr "Kuriant klientą \"%s\" įvyko klaida."
 
 #, python-format
 msgid "Unable to get token for user \"%s\"."
-msgstr ""
+msgstr "Nepavyko gauti tokeno skirto klientui \"%s\"."
 
 msgid "Reset of the certification authority was successfully submitted."
-msgstr ""
+msgstr "Užklausa atstatyti CA sėkmingai išsiųsta."
 
 msgid "An error occurred when trying to reset the CA."
-msgstr ""
+msgstr "Bandant atstatyto CA įvyko klaida."
 
 msgid ""
 "This page serves for management of remote access to the router's "
 "configuration backend using TLS API. You can use generated client tokens for "
 "authentication in third-party applications that implement this API."
 msgstr ""
+"Šis puslapis leidžia valdyti TLS API prieigą prie maršrutizatoriaus valdymo. "
+"Čia galite sugeneruoti kliento tokenus. Kliento tokenus vėliau gali naudoti "
+"kitos programos atuentifikuotam priėjimui prie API."
 
 msgid ""
 "Please be aware that these tokens allow access to the whole configuration of "
 "the router, which may be exploited by a malicious user who has access to "
 "them."
 msgstr ""
+"Atkreipkite dėmesį, kad šie tokenai suteikia teises pilnai perkonfigūruoti "
+"maršrutizatorių. Gavę tokeną, kenkėjiškai nusiteikę asmenys gali jį "
+"panaudoti blogiems tikslams."
 
 msgid ""
 "New certification authority is being generated. Please try coming back later."
 msgstr ""
+"Šiuo metu generuojami nauji CA (sertifikavimo įgaliojimai). Pamėginkite "
+"ateiti vėliau."
 
 msgid "List of clients"
-msgstr ""
+msgstr "Klientų sąrašas"
 
 msgid "Client"
-msgstr ""
+msgstr "Klientas"
 
 msgid "Status"
-msgstr ""
+msgstr "Būsena"
 
 msgid "Access token"
-msgstr ""
+msgstr "Prieigos tokenas"
 
 msgid "Download token"
-msgstr ""
+msgstr "Atsisiųsti tokeną"
 
 msgid "Get QR code"
-msgstr ""
+msgstr "Gauti QR kodą"
 
 msgid "New client"
-msgstr ""
+msgstr "Naujas klientas"
 
 msgid "Create"
-msgstr ""
+msgstr "Sukurti"
 
 msgid "Revoke access"
-msgstr ""
+msgstr "Prieigos atšaukimas"
 
 msgid ""
 "It is not possible to revoke access to individual clients, but you can reset "
@@ -99,29 +116,35 @@ msgid ""
 "clients. Creating a new authority takes some time. This action is "
 "irreversible."
 msgstr ""
+"Negalima atšaukti prieigos kiekvienam klientui individualiai, tačiau galite "
+"iš naujo sugeneruoti CA (sertifikavimo įgaliojimus), tai atjungs prieigą "
+"visiems klientams. Naujų CA generavimas užtrunka. Šis veiksmas neatstatomas."
 
 msgid "Reset CA"
-msgstr ""
+msgstr "Generuoti naujus CA"
 
 msgid ""
 "Do you really want to reset the CA and revoke access for all the clients? "
 "This can not be undone!"
 msgstr ""
+"Ar tikrai norite generuoti naujus CA ir atjungti prieigą visiems klientams? "
+"Šis veiksmas negalės būti atstatomas!"
 
 msgid "Access token for client"
-msgstr ""
+msgstr "Prieigos tokenai klientui"
 
 msgid "Token will be automatically invalidated in"
-msgstr ""
+msgstr "Tokenas automatiškai nustos galioti už"
 
 msgid "Unable to get token. Please try refreshing the page and try again."
 msgstr ""
+"Nepavyko gauti tokeno. Pamėginkite perkrauti puslapį ir bandyti dar kartą."
 
 msgid "active"
-msgstr ""
+msgstr "aktyvus"
 
 msgid "revoked"
-msgstr ""
+msgstr "atšauktas"
 
 msgid "expired"
-msgstr ""
+msgstr "nebegaliojantis"
