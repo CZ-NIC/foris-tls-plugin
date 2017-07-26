@@ -9,7 +9,6 @@ import os
 
 import bottle
 
-from foris.core import gettext_dummy as gettext, ugettext as _
 from foris.fapi import ForisForm
 from foris.form import Textbox
 from foris.plugins import ForisPlugin
@@ -17,6 +16,7 @@ from foris.config import ConfigPageMixin, add_config_page
 from foris.config_handlers import BaseConfigHandler
 from foris.utils import messages, reverse
 from foris.validators import RegExp, LenRange
+from foris.utils.translators import gettext_dummy as gettext, ugettext as _
 
 from .nuci import get_ca, get_stats_dict, get_token, ca_filter, new_client, reset_ca
 from .nuci.tls_module import client_name_regexp
