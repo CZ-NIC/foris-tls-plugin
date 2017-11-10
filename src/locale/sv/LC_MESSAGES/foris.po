@@ -8,90 +8,102 @@ msgstr ""
 "Project-Id-Version: Foris TLS plugin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-03-02 13:25+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2017-08-02 11:24+0000\n"
+"Last-Translator: Adam Chodorowski <adam@chodorowski.com>\n"
+"Language-Team: Swedish <https://hosted.weblate.org/projects/turris/foris-tls-"
+"plugin/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.16-dev\n"
 
 msgid "Access tokens"
-msgstr ""
+msgstr "Åtkomstnycklar"
 
 msgid "Client name"
-msgstr ""
+msgstr "Klientnamn"
 
 msgid ""
 "The display name for the client. It must be shorter than 64 characters and "
 "must contain only alphanumeric characters, dots, dashes and underscores."
 msgstr ""
+"Klientens visningsnamn. Det måste vara kortare än 64 tecken och får endast "
+"inehålla bokstäver, siffror, punkter, bindestreck och understreck."
 
 msgid "Client name is invalid."
-msgstr ""
+msgstr "Klientens namn är ogiltigt."
 
 #, python-format
 msgid ""
 "Request for creating a new client \"%s\" was succesfully submitted. Client "
 "token should be available for download in a minute."
 msgstr ""
+"Begäran om att skapa en ny klient \"%s\" har skickats in. Klientnyckeln bör "
+"bli tillgänglig för hämtning om en stund."
 
 #, python-format
 msgid "An error occurred when creating client \"%s\"."
-msgstr ""
+msgstr "Ett fel uppstod när klienten \"%s\" skapades."
 
 #, python-format
 msgid "Unable to get token for user \"%s\"."
-msgstr ""
+msgstr "Kunde inte hämta åtkomstnyckel för användaren \"%s\"."
 
 msgid "Reset of the certification authority was successfully submitted."
-msgstr ""
+msgstr "Återställandet av certifikatutfärdaren har skickats in."
 
 msgid "An error occurred when trying to reset the CA."
-msgstr ""
+msgstr "Ett fel uppstöd när certifikatutfärdaren skulle återställas."
 
 msgid ""
 "This page serves for management of remote access to the router's "
 "configuration backend using TLS API. You can use generated client tokens for "
 "authentication in third-party applications that implement this API."
 msgstr ""
+"På denna kan du hantera fjärråtkomst till routerns konfiguration via ett TLS "
+"API. Du kan använda genererade åtkomstnycklar för autentisering i "
+"tredjepartsprogram som implementerar detta API."
 
 msgid ""
 "Please be aware that these tokens allow access to the whole configuration of "
 "the router, which may be exploited by a malicious user who has access to "
 "them."
 msgstr ""
+"Notera att dessa åtkomstnycklar ger behörighet till hela routerns "
+"konfiguration, vilket kan utnyttjas av obehöriga som får tillgång till dom."
 
 msgid ""
 "New certification authority is being generated. Please try coming back later."
-msgstr ""
+msgstr "Skapande av ny certifikatutfärdare pågår. Vänligen återkom senare."
 
 msgid "List of clients"
-msgstr ""
+msgstr "Lista över klienter"
 
 msgid "Client"
-msgstr ""
+msgstr "Klient"
 
 msgid "Status"
-msgstr ""
+msgstr "Status"
 
 msgid "Access token"
-msgstr ""
+msgstr "Åtkomstnyckel"
 
 msgid "Download token"
-msgstr ""
+msgstr "Hämta åtkomstnyckel"
 
 msgid "Get QR code"
-msgstr ""
+msgstr "Hämta QR-kod"
 
 msgid "New client"
-msgstr ""
+msgstr "Ny klient"
 
 msgid "Create"
-msgstr ""
+msgstr "Skapa"
 
 msgid "Revoke access"
-msgstr ""
+msgstr "Återkalla åtkomst"
 
 msgid ""
 "It is not possible to revoke access to individual clients, but you can reset "
@@ -99,29 +111,36 @@ msgid ""
 "clients. Creating a new authority takes some time. This action is "
 "irreversible."
 msgstr ""
+"Det är inte möjligt att återkalla åtkomst för enskilda klienter, men du kan "
+"återställa hela certifikatutfärdaren och inaktivera åtkomst för alla "
+"klienter. Att skapa en ny certifikatutfärdare tar en del tid. Denna åtgärd "
+"går inte att ångra."
 
 msgid "Reset CA"
-msgstr ""
+msgstr "Återställ certifikatutfärdare"
 
 msgid ""
 "Do you really want to reset the CA and revoke access for all the clients? "
 "This can not be undone!"
 msgstr ""
+"Vill du verkligen återställa certifikatutfärdaren och återkalla åtkomst för "
+"alla klienter? Detta kan inte ångras!"
 
 msgid "Access token for client"
-msgstr ""
+msgstr "Åtkomstnyckel för klienten"
 
 msgid "Token will be automatically invalidated in"
-msgstr ""
+msgstr "Åtkomstnyckeln kommer automatiskt ogiltigförklaras om"
 
 msgid "Unable to get token. Please try refreshing the page and try again."
 msgstr ""
+"Kunde inte hämta åtkomstnyckel. Vänligen uppdatera sidan och försök igen."
 
 msgid "active"
-msgstr ""
+msgstr "aktiv"
 
 msgid "revoked"
-msgstr ""
+msgstr "återkallad"
 
 msgid "expired"
-msgstr ""
+msgstr "utgången"
