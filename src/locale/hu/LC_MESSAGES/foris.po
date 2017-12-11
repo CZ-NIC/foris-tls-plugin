@@ -1,0 +1,151 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Foris TLS plugin package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Foris TLS plugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-04-10 14:46+0200\n"
+"PO-Revision-Date: 2017-12-08 21:26+0000\n"
+"Last-Translator: Zoli <boritek@gmail.com>\n"
+"Language-Team: Hungarian <https://hosted.weblate.org/projects/turris/foris-"
+"tls-plugin/hu/>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.18-dev\n"
+
+msgid "Access tokens"
+msgstr "Hozzáférési tokenek"
+
+msgid "Client name"
+msgstr "Ügyfélnév"
+
+msgid ""
+"The display name for the client. It must be shorter than 64 characters and "
+"must contain only alphanumeric characters, dots, dashes and underscores."
+msgstr ""
+"Az ügyfél megjelenítendő neve. 64 karakternél rövidebbnek kell lennie és "
+"csak a következőkből állhat: alfanumerikus karakterek, pontok, kötőjelek és "
+"aláhúzásjelek."
+
+msgid "Client name is invalid."
+msgstr "Érvénytelen ügyfélnév."
+
+#, python-format
+msgid ""
+"Request for creating a new client \"%s\" was succesfully submitted. Client "
+"token should be available for download in a minute."
+msgstr ""
+"%s új ügyfél létrehozásának kérése sikeresen elküldve. Ügyféltoken kb. egy "
+"percen belül lesz letöltésre kész."
+
+#, python-format
+msgid "An error occurred when creating client \"%s\"."
+msgstr "Hiba történt \"a(z) %s\" ügyfél létrehozásakor."
+
+#, python-format
+msgid "Unable to get token for user \"%s\"."
+msgstr "Nem lehet megszerezni a \"%s\" felhasználó tokenjét."
+
+msgid "Reset of the certification authority was successfully submitted."
+msgstr "A hitelesítő szervezet visszaállítási kérése sikeresen elküldve."
+
+msgid "An error occurred when trying to reset the CA."
+msgstr "Hiba történt a CA visszaállítása közben."
+
+msgid ""
+"This page serves for management of remote access to the router's "
+"configuration backend using TLS API. You can use generated client tokens for "
+"authentication in third-party applications that implement this API."
+msgstr ""
+"Ez az oldal a router TLS API-t használó konfigurációs backend távelérésének "
+"kezelésére szolgál. Segítségével létrehozott ügyfél tokeneket harmadik "
+"féltől származó alkalmazások (melyek az API-t használják) hitelesítésre "
+"használhatja."
+
+msgid ""
+"Please be aware that these tokens allow access to the whole configuration of "
+"the router, which may be exploited by a malicious user who has access to "
+"them."
+msgstr ""
+"Kérjük, vegye figyelembe, hogy ezek a tokenek lehetővé teszik a hozzáférést "
+"a router minden beállításához, amelyet kihasználhat egy rosszindulatú "
+"felhasználó, ha hozzáfér."
+
+msgid ""
+"New certification authority is being generated. Please try coming back later."
+msgstr ""
+"Új hitelesítésszolgáltató létrehozása folyamatban van. Próbáljon meg később "
+"visszajönni."
+
+msgid "List of clients"
+msgstr "Ügyfelek listája"
+
+msgid "Client"
+msgstr "Ügyfél"
+
+msgid "Status"
+msgstr "Állapot"
+
+msgid "Access token"
+msgstr "Hozzáférési token"
+
+msgid "Download token"
+msgstr "Token letöltése"
+
+msgid "Get QR code"
+msgstr "QR-kód kérése"
+
+msgid "New client"
+msgstr "Új ügyfél"
+
+msgid "Create"
+msgstr "Létrehozás"
+
+msgid "Revoke access"
+msgstr "Hozzáférés visszavonása"
+
+msgid ""
+"It is not possible to revoke access to individual clients, but you can reset "
+"the whole certification authority (CA) and disable access for all the "
+"clients. Creating a new authority takes some time. This action is "
+"irreversible."
+msgstr ""
+"Nem lehet egyedi ügyfelek hozzáférésének visszavonása, de visszaállítható az "
+"egész hitelesítésszolgáltató (CA), illetve letiltható a hozzáférés az összes "
+"ügyfélhez. Új hitelesítésszolgáltató létrehozása bizonyos időt vesz igénybe. "
+"Ez a művelet visszavonhatatlan."
+
+msgid "Reset CA"
+msgstr "CA visszaállítása"
+
+msgid ""
+"Do you really want to reset the CA and revoke access for all the clients? "
+"This can not be undone!"
+msgstr ""
+"Biztosan szeretné visszaállítani a CA-t és visszavonni az összes ügyfél "
+"hozzáférését? Ez a művelet nem vonható vissza!"
+
+msgid "Access token for client"
+msgstr "Ügyfél hozzáférési tokenje"
+
+msgid "Token will be automatically invalidated in"
+msgstr "Token automatikusan érvényét veszti"
+
+msgid "Unable to get token. Please try refreshing the page and try again."
+msgstr ""
+"Nem sikerült letölteni a tokent. Próbálja ismét az oldal frissítése után."
+
+msgid "active"
+msgstr "aktív"
+
+msgid "revoked"
+msgstr "visszavonva"
+
+msgid "expired"
+msgstr "lejárt"
